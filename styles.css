@@ -1,29 +1,67 @@
 body { 
-  background:#0f0f1f; 
-  color:#fff; 
-  font-family:sans-serif; 
-  text-align:center; 
-  padding:50px;
-}
-#card { 
-  margin-top:50px; 
-  font-size:2em; 
-  padding:30px; 
-  border:2px solid #fff; 
-  display:inline-block; 
-  border-radius:10px; 
-  max-width:500px;
-}
-button { 
-  background:#6b4bc4; 
-  color:#fff; 
-  padding:10px 20px; 
-  font-size:1.2em; 
-  border:none; 
-  border-radius:8px; 
-  cursor:pointer; 
-}
-button:hover { 
-  background:#8b6de3; 
+  background: radial-gradient(circle at center, #1c1c3c 0%, #0a0a1a 100%);
+  color: #fff; 
+  font-family: 'Georgia', serif; 
+  text-align: center; 
+  padding: 50px;
+  overflow: hidden;
 }
 
+h1 {
+  font-size: 2.5em;
+  text-shadow: 0 0 20px #9a7dff;
+  margin-bottom: 30px;
+}
+
+button { 
+  background: #6b4bc4; 
+  color: #fff; 
+  padding: 12px 30px; 
+  font-size: 1.3em; 
+  border: 2px solid #a78bfa;
+  border-radius: 12px; 
+  cursor: pointer; 
+  box-shadow: 0 0 20px #6b4bc4;
+  transition: all 0.3s ease;
+}
+button:hover { 
+  background: #8b6de3;
+  box-shadow: 0 0 25px #9a7dff;
+}
+
+#card { 
+  margin-top: 50px; 
+  font-size: 2em; 
+  padding: 40px; 
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid #a78bfa; 
+  border-radius: 15px; 
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.5);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#card.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Subtle twinkling stars */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://i.imgur.com/3h1r1ZB.png') repeat;
+  opacity: 0.2;
+  animation: twinkle 10s linear infinite;
+}
+
+@keyframes twinkle {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
