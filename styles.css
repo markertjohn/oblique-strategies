@@ -1,1 +1,29 @@
+body { 
+  background:#0f0f1f; 
+  color:#fff; 
+  font-family:sans-serif; 
+  text-align:center; 
+  padding:50px;
+}
+#card { 
+  margin-top:50px; 
+  font-size:2em; 
+  padding:30px; 
+  border:2px solid #fff; 
+  display:inline-block; 
+  border-radius:10px; 
+  max-width:500px;
+}
+button { 
+  background:#6b4bc4; 
+  color:#fff; 
+  padding:10px 20px; 
+  font-size:1.2em; 
+  border:none; 
+  border-radius:8px; 
+  cursor:pointer; 
+}
+button:hover { 
+  background:#8b6de3; 
+}
 
