@@ -4,11 +4,15 @@ const strategies = [
   "Repetition is a form of change",
   "When in doubt, keep it fun",
   "Use the whole animal"
-  // Add your full list here
+  // Add all 23 here later
 ];
 
 document.getElementById('draw').addEventListener('click', () => {
   const card = strategies[Math.floor(Math.random() * strategies.length)];
-  document.getElementById('card').innerText = card;
+  const cardElement = document.getElementById('card');
+  cardElement.classList.remove('show');
+  setTimeout(() => {
+    cardElement.innerText = card;
+    cardElement.classList.add('show');
+  }, 300);
 });
-
